@@ -1,155 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <?php wp_head(); ?>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<html class="no-js" <?php language_attributes(); ?>>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="site-header">
+    <div class="container">
+        <a class="navbar-brand" href="/"><img class="logo-navbar" src="https://medias.andromede.pics/img/5eace520-a05b-11.gif" alt="logo marque"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-	<head>
+            <?php wp_nav_menu([
+                'theme_location' => 'custom_header',
+                'menu_class' => 'navbar-nav me-auto mb-2 mb-lg-0',
+                'container' => false
+            ]); ?>
 
-		<meta charset="<?php bloginfo( 'charset' ); ?>">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+            <?php get_search_form(); ?>
 
-		<link rel="profile" href="https://gmpg.org/xfn/11">
+        </div>
+    </div>
+</nav>
 
-		<?php wp_head(); ?>
 
-	</head>
-
-	<body <?php body_class(); ?>>
-
-		<?php
-		wp_body_open();
-		?>
-
-		<header id="site-header" class="header-footer-group">
-
-			<div class="header-inner section-inner">
-
-				<div class="header-titles-wrapper">
-
-					<?php
-
-					// Check whether the header search is activated in the customizer.
-					$enable_header_search = get_theme_mod( 'enable_header_search', true );
-
-					if ( true === $enable_header_search ) {
-
-						?>
-
-						<button class="toggle search-toggle mobile-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
-							<span class="toggle-inner">
-								<span class="toggle-icon">
-								</span>
-							</span>
-						</button><!-- .search-toggle -->
-
-					<?php } ?>
-
-					<div class="header-titles">
-
-					</div><!-- .header-titles -->
-
-					<button class="toggle nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"  data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
-						<span class="toggle-inner">
-						</span>
-					</button><!-- .nav-toggle -->
-
-				</div><!-- .header-titles-wrapper -->
-
-				<div class="header-navigation-wrapper">
-
-					<?php
-					if ( has_nav_menu( 'primary' ) || ! has_nav_menu( 'expanded' ) ) {
-						?>
-
-							<nav class="primary-menu-wrapper" aria-label="">
-
-								<ul class="primary-menu reset-list-style">
-
-								<?php
-								if ( has_nav_menu( 'primary' ) ) {
-
-									wp_nav_menu(
-										array(
-											'container'  => '',
-											'items_wrap' => '%3$s',
-											'theme_location' => 'primary',
-										)
-									);
-
-								} elseif ( ! has_nav_menu( 'expanded' ) ) {
-
-									wp_list_pages(
-										array(
-											'match_menu_classes' => true,
-											'show_sub_menu_icons' => true,
-											'title_li' => false,
-										)
-									);
-
-								}
-								?>
-
-								</ul>
-
-							</nav><!-- .primary-menu-wrapper -->
-
-						<?php
-					}
-
-					if ( true === $enable_header_search || has_nav_menu( 'expanded' ) ) {
-						?>
-
-						<div class="header-toggles hide-no-js">
-
-						<?php
-						if ( has_nav_menu( 'expanded' ) ) {
-							?>
-
-							<div class="toggle-wrapper nav-toggle-wrapper has-expanded-menu">
-
-								<button class="toggle nav-toggle desktop-nav-toggle" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
-									<span class="toggle-inner">
-										<span class="toggle-icon">
-										</span>
-									</span>
-								</button><!-- .nav-toggle -->
-
-							</div><!-- .nav-toggle-wrapper -->
-
-							<?php
-						}
-
-						if ( true === $enable_header_search ) {
-							?>
-
-							<div class="toggle-wrapper search-toggle-wrapper">
-
-								<button class="toggle search-toggle desktop-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
-								</button><!-- .search-toggle -->
-
-							</div>
-
-							<?php
-						}
-						?>
-
-						</div><!-- .header-toggles -->
-						<?php
-					}
-					?>
-
-				</div><!-- .header-navigation-wrapper -->
-
-			</div><!-- .header-inner -->
-
-			<?php
-			// Output the search modal (if it is activated in the customizer).
-			if ( true === $enable_header_search ) {
-				get_template_part( 'template-parts/modal-search' );
-			}
-			?>
-
-		</header><!-- #site-header -->
-
-		<?php
-		// Output the menu modal.
-		get_template_part( 'template-parts/modal-menu' );
+<div class="container p-5">
