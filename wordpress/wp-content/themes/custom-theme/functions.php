@@ -47,3 +47,8 @@ define('IMAGES', THEMEROOT.'/img');
 define('JS', THEMEROOT.'/js');
 
 wp_enqueue_style( 'style', THEMEROOT . '/style.css' );
+
+function enable_comments_custom_post_type() {
+ add_post_type_support( 'Recettes', 'comments' );
+}
+add_action( 'init', 'enable_comments_custom_post_type', 11 );

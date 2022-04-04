@@ -52,6 +52,6 @@ function wpm_custom_post_type() {
 	register_post_type( 'Recettes', $args );
 
 }
-
+add_post_type_support( 'Recettes', 'comments' );
 add_action( 'init', 'wpm_custom_post_type', 0 );
 add_theme_support('post-thumbnails');
