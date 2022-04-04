@@ -35,7 +35,7 @@ function wpm_custom_post_type() {
 		'description'         => __( 'Tous sur Recettes'),
 		'labels'              => $labels,
 		// On définit les options disponibles dans l'éditeur de notre custom post type ( un titre, un auteur...)
-		'supports'            => array( 'title', 'author', 'thumbnail', 'comments', 'description', 'taxonomies'),
+		'supports'            => array( 'title', 'author', 'revisions', 'excerpt', 'comments', 'description', 'taxonomies', 'editor', 'thumbnail'),
 		/* 
 		* Différentes options supplémentaires
 		*/
@@ -54,3 +54,4 @@ function wpm_custom_post_type() {
 }
 
 add_action( 'init', 'wpm_custom_post_type', 0 );
+add_theme_support('post-thumbnails');
