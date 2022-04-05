@@ -71,7 +71,7 @@ p {
     font-size: 1rem;
 }
 
-a:not(#nav a, #backtoblog a) {
+a:not(#nav a, #backtoblog a, .comment-reply-link) {
     text-decoration: none !important;
     color: #24bdcd !important;
 }
@@ -149,6 +149,7 @@ div.comment:first-of-type {
 	line-height: 1.1;
 	margin-bottom: 1.5rem;
 	position: relative;
+	margin-top: 1rem;
 }
 
 .hide-avatars .comment-meta {
@@ -247,6 +248,7 @@ div.comment:first-of-type {
 	color: #fff !important;
 	padding: 0.7rem;
     font-size: 1rem;
+	text-decoration: none;
 }
 
 .comment-reply-link:hover {
@@ -278,4 +280,8 @@ div.comment:first-of-type {
 .comment-form-comment {
     display: flex;
     flex-direction: column;
+}
+
+.reply {
+	margin-top: 11.22px;
 }
