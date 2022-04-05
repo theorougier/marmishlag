@@ -71,7 +71,7 @@ p {
     font-size: 1rem;
 }
 
-a {
+a:not(#nav a, #backtoblog a) {
     text-decoration: none !important;
     color: #24bdcd !important;
 }

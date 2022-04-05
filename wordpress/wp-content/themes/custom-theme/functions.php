@@ -36,6 +36,11 @@ function redirect_if_user_not_logged_in() {
    
 }
 
+function wpum_custom_redirect_to_homepage( $url ) {
+    return home_url();
+}
+add_filter( 'wpum_get_login_redirect', 'wpum_custom_redirect_to_homepage' );
+
 
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('wphetic-bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css');
