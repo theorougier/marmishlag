@@ -1,7 +1,7 @@
 <?php
 /* 
-Plugin Name: Recette du gueto
-Description: Recette du gueto pas cher roya
+Plugin Name: Recette du guetto
+Description: Recette du guetto pas cher roya
 Author: Groupe 6
 Version: 1.0
 */
@@ -48,7 +48,7 @@ function wpm_custom_post_type() {
 
 	);
 	
-	// On enregistre notre custom post type qu'on nomme ici "serietv" et ses arguments
+	// On enregistre notre custom post type qu'on nomme ici "recettes" et ses arguments
 	register_post_type( 'Recettes', $args );
 
 }
