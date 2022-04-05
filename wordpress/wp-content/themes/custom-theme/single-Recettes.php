@@ -11,9 +11,9 @@
 </style>
 
 <section>
-    <h2 class="title"><?php echo the_title() ?>
+    <h2 class="title text-center"><?php echo the_title() ?></h2>
     <div class="col-12">
-        <img class="col-12" src="<?php echo $img_ar[0] ?>"/>
+        <img class="col-12 image-single-recette my-3" src="<?php echo $img_ar[0] ?>"/>
     </div>
     <span><?php echo the_content() ?>
     <div>
