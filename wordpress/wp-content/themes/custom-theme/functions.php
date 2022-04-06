@@ -58,6 +58,16 @@ function enable_comments_custom_post_type() {
 }
 add_action( 'init', 'enable_comments_custom_post_type', 11 );
 
+
+function wpc_cpt_in_search($query) {
+  if (! is_admin() && $query->is_main_query()) {
+    if ($query->is_search) {
+      $query->set('Recettes', array('post', 'property'));
+    }
+  }
+}
+
+add_action('pre_get_posts','wpc_cpt_in_search');
 /**
  * Create moderator role
  *

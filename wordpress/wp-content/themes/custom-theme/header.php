@@ -19,6 +19,7 @@
         </button>
         <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
         <?php if (is_user_logged_in()): ?>
+            <a class="mx-3" href="<?php echo get_permalink( get_page_by_title( 'Formulaire de création de recette' ) ) ?>"><span class="dashicons dashicons-edit-page"></span>Créez votre recette</a>
             <a class="mx-3" href="<?php echo wp_logout_url() ?>"><span class="dashicons dashicons-admin-plugins"></span>Logout</a>
         <?php else: ?>
             <a class="mx-3" href="<?php echo wp_login_url() ?>"><span class="dashicons dashicons-admin-network"></span>Login</a>
