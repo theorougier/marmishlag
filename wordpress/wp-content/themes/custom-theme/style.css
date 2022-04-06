@@ -23,51 +23,52 @@ h4,
 h5,
 h6,
 .faux-heading {
-	font-feature-settings: "lnum";
-	font-variant-numeric: lining-nums;
-	font-weight: 700;
-	letter-spacing: -0.0415625em;
-	line-height: 1.25;
-	margin: 3.5rem 0 2rem;
+    font-feature-settings: "lnum";
+    font-variant-numeric: lining-nums;
+    font-weight: 700;
+    letter-spacing: -0.0415625em;
+    line-height: 1.25;
+    margin: 3.5rem 0 2rem;
+    color: #24bdcd
 }
 
 h1,
 .heading-size-1 {
-	font-size: 3.6rem;
-	font-weight: 800;
-	line-height: 1.138888889;
+    font-size: 3.6rem;
+    font-weight: 800;
+    line-height: 1.138888889;
 }
 
 h2,
 .heading-size-2 {
-	font-size: 3.2rem;
+    font-size: 3.2rem;
 }
 
 h3,
 .heading-size-3 {
-	font-size: 2.8rem;
+    font-size: 2.8rem;
 }
 
 h4,
 .heading-size-4 {
-	font-size: 2.4rem;
+    font-size: 2.4rem;
 }
 
 h5,
 .heading-size-5 {
-	font-size: 2.1rem;
+    font-size: 2.1rem;
 }
 
 h6,
 .heading-size-6 {
-	font-size: 1.6rem;
-	letter-spacing: 0.03125em;
-	text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: 0.03125em;
+    text-transform: uppercase;
 }
 
 p {
-	line-height: 1.5;
-	margin: 0 0 1em 0;
+    line-height: 1.5;
+    margin: 0 0 1em 0;
     font-size: 1rem;
 }
 
@@ -90,7 +91,7 @@ a:not(#nav a, #backtoblog a, .comment-reply-link) {
 }
 
 .navbar ul a {
-   text-decoration: none;
+    text-decoration: none;
 }
 
 .navbar .navbar-nav {
@@ -107,12 +108,12 @@ a:not(#nav a, #backtoblog a, .comment-reply-link) {
 /* Comment Headers ----------------------------- */
 
 .comments-wrapper {
-	margin-top: 5rem;
+    margin-top: 5rem;
 }
 
 .comment-reply-title {
-	margin: 0 0 4rem 0;
-	text-align: center;
+    margin: 0 0 4rem 0;
+    text-align: center;
 }
 
 
@@ -124,131 +125,131 @@ a:not(#nav a, #backtoblog a, .comment-reply-link) {
 .comments .pingback,
 .comments .trackback,
 .comments .review {
-	padding-top: 3.5rem;
+    padding-top: 3.5rem;
 }
 
 div.comment:first-of-type {
-	margin-top: 3.5rem;
-	padding-top: 0;
+    margin-top: 3.5rem;
+    padding-top: 0;
 }
 
 .comments .comments-header + div {
-	margin-top: 0;
-	padding-top: 0;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .comment-body {
-	position: relative;
+    position: relative;
 }
 
 .comment .comment {
-	padding-left: 5%;
+    padding-left: 5%;
 }
 
 .comment-meta {
-	line-height: 1.1;
-	margin-bottom: 1.5rem;
-	position: relative;
-	margin-top: 1rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    position: relative;
+    margin-top: 1rem;
 }
 
 .hide-avatars .comment-meta {
-	min-height: 0;
-	padding-left: 0;
+    min-height: 0;
+    padding-left: 0;
 }
 
 .comment-meta a {
-	color: inherit;
+    color: inherit;
     font-size: 1rem;
 }
 
 .comment-author {
-	font-size: 1.2rem;
-	font-weight: 700;
-	letter-spacing: -0.027777778em;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -0.027777778em;
 }
 
 .comment-author a {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 .comment-author a:hover,
 .comment-author a:focus {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 .comment-meta .avatar {
-	height: 4rem;
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 4rem;
+    height: 4rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4rem;
 }
 
 .comment-author .url {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 .comment-metadata {
-	color: #6d6d6d;
-	font-size: 1.4rem;
-	font-weight: 500;
-	margin-top: 0.6rem;
+    color: #6d6d6d;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-top: 0.6rem;
 }
 
 .comment-metadata a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 .comment-metadata a:focus,
 .comment-metadata a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 
 /* COMMENT CONTENT */
 
 .comment-content.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-	width: 100%;
+    width: 100%;
 }
 
 .comment-content.entry-content .alignleft {
 
-	/*rtl:ignore*/
-	margin-left: 0;
+    /*rtl:ignore*/
+    margin-left: 0;
 }
 
 .comment-content.entry-content .alignright {
 
-	/*rtl:ignore*/
-	margin-right: 0;
+    /*rtl:ignore*/
+    margin-right: 0;
 }
 
 /* COMMENT FOOTER */
 
 .comment-footer-meta {
-	align-items: center;
-	display: flex;
-	flex-wrap: wrap;
-	font-size: 1.2rem;
-	font-weight: 600;
-	justify-content: flex-start;
-	letter-spacing: 0.030833333em;
-	line-height: 1;
-	margin: 1.5rem 0 -1rem -1.5rem;
-	text-transform: uppercase;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+    font-weight: 600;
+    justify-content: flex-start;
+    letter-spacing: 0.030833333em;
+    line-height: 1;
+    margin: 1.5rem 0 -1rem -1.5rem;
+    text-transform: uppercase;
 }
 
 .comment-footer-meta > * {
-	margin: 0 0 1rem 1.5rem;
+    margin: 0 0 1rem 1.5rem;
 }
 
 .comment-reply-link {
-	background-color: #24bdcd;
-	color: #fff !important;
-	padding: 0.7rem;
+    background-color: #24bdcd;
+    color: #fff !important;
+    padding: 0.7rem;
     font-size: 1rem;
-	text-decoration: none;
+    text-decoration: none;
 }
 
 .comment-reply-link:hover {
@@ -256,22 +257,22 @@ div.comment:first-of-type {
 }
 
 .bypostauthor .comment-footer-meta .by-post-author {
-	display: block;
+    display: block;
 }
 
 .comment-footer-meta a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 .comment-footer-meta a:focus,
 .comment-footer-meta a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
-.form-submit .submit {
+.form-submit .submit, #searchsubmit, #submit {
     background-color: #24bdcd;
-	color: #fff !important;
-	padding: 0.7rem;
+    color: #fff !important;
+    padding: 0.7rem;
     font-size: 1rem;
     border: none;
     outline: none;
@@ -283,5 +284,15 @@ div.comment:first-of-type {
 }
 
 .reply {
-	margin-top: 11.22px;
+    margin-top: 11.22px;
+}
+
+#s {
+    padding: 0.7rem;
+    margin: unset;
+    border: unset;
+}
+
+.card-header, .card-text {
+	color: white
 }
