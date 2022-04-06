@@ -68,3 +68,28 @@ function wpc_cpt_in_search($query) {
 }
 
 add_action('pre_get_posts','wpc_cpt_in_search');
+/**
+ * Create moderator role
+ *
+ */
+add_role('Moderateur','Moderateur', [
+    'read' => true,
+    'moderate_comments' => true,
+    'delete_users' => true,
+    'list_users' => true,
+    'remove_users' => true,
+    'delete_posts' => true,
+    'edit_posts' => true,
+    'publish_posts' => true,
+    'upload_files' => true,
+    'edit_published_posts'=> true,
+    'delete_published_posts' => true,
+    'publish_pages'=> true,
+    'edit_published_pages' => true,
+    'edit_pages' => true,
+    'delete_pages' => true,
+]);
+
+add_action('switch_theme', function (){
+    remove_role('Moderateur');
+});
