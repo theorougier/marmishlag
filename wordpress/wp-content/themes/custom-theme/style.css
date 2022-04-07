@@ -29,7 +29,7 @@ h6,
     letter-spacing: -0.0415625em;
     line-height: 1.25;
     margin: 3.5rem 0 2rem;
-    color: #24bdcd
+    color: black
 }
 
 h1,
@@ -74,7 +74,11 @@ p {
 
 a:not(#nav a, #backtoblog a, .comment-reply-link) {
     text-decoration: none !important;
-    color: #24bdcd !important;
+    color: black !important;
+}
+
+.wp-menu-name, .wp-submenu a{
+    color: white !important;
 }
 
 .navbar ul {
@@ -245,7 +249,7 @@ div.comment:first-of-type {
 }
 
 .comment-reply-link {
-    background-color: #24bdcd;
+    background-color: black;
     color: #fff !important;
     padding: 0.7rem;
     font-size: 1rem;
@@ -270,7 +274,7 @@ div.comment:first-of-type {
 }
 
 .form-submit .submit, #searchsubmit, #submit {
-    background-color: #24bdcd;
+    background-color: black;
     color: #fff !important;
     padding: 0.7rem;
     font-size: 1rem;
@@ -295,4 +299,43 @@ div.comment:first-of-type {
 
 .card-header, .card-text {
 	color: white
+}
+
+.container-recette {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+}
+
+@media screen and (min-width: 758px ) {
+    .container-recette {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 998px ) {
+    .container-recette {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.card a{
+    height: 100%;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+
+.card-img-overlay {
+    background-color: rgba(0,0,0,0.5);
 }

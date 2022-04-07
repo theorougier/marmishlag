@@ -18,8 +18,8 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
-        <?php if(user_has_role(get_current_user_id(), 'administrator')): ?>
-            <a class="mx-3" href="<?php echo get_permalink( get_page_by_title( 'Formulaire de création de recette' ) ) ?>"><span class="dashicons dashicons-edit-page"></span>Créez votre recette</a>
+        <?php if(is_user_logged_in()): ?>
+                <a class="mx-3" href="/wp-admin/post-new.php?post_type=recettes"><span class="dashicons dashicons-edit-page"></span>Créez votre recette</a>
         <?php endif ?>
         <?php if (is_user_logged_in()): ?>
             <a class="mx-3" href="<?php echo wp_logout_url() ?>"><span class="dashicons dashicons-admin-plugins"></span>Logout</a>
